@@ -21,17 +21,17 @@
   --primary-900: #001333;
   
   /* 서브 컬러 팔레트 */
-  --secondary: #00afad;
-  --secondary-50: #e6fffe;
-  --secondary-100: #ccfffd;
-  --secondary-200: #99fffb;
-  --secondary-300: #66fff9;
-  --secondary-400: #33fff7;
-  --secondary-500: #00afad;
-  --secondary-600: #008c8a;
-  --secondary-700: #006967;
-  --secondary-800: #004644;
-  --secondary-900: #002322;
+  --secondary: #123f6d;
+  --secondary-50: #e6ecf4;
+  --secondary-100: #ccd9e9;
+  --secondary-200: #99b3d3;
+  --secondary-300: #668dbd;
+  --secondary-400: #3367a7;
+  --secondary-500: #123f6d;
+  --secondary-600: #0e3258;
+  --secondary-700: #0a2543;
+  --secondary-800: #07192e;
+  --secondary-900: #030c19;
   
   /* 기본 색상 */
   --background: #ffffff;
@@ -58,7 +58,7 @@
   
   /* 차트 컬러 */
   --chart-1: #0067ac;
-  --chart-2: #00afad;
+  --chart-2: #123f6d;
   --chart-3: #f59e0b;
   --chart-4: #10b981;
   --chart-5: #8b5cf6;
@@ -91,17 +91,17 @@
   --primary-900: #f8fafc;
   
   /* 서브 컬러 팔레트 (다크 모드) */
-  --secondary: #06b6d4;
-  --secondary-50: #164e63;
-  --secondary-100: #155e75;
-  --secondary-200: #0e7490;
-  --secondary-300: #0891b2;
-  --secondary-400: #06b6d4;
-  --secondary-500: #22d3ee;
-  --secondary-600: #67e8f9;
-  --secondary-700: #a5f3fc;
-  --secondary-800: #cffafe;
-  --secondary-900: #ecfeff;
+  --secondary: #3b82f6;
+  --secondary-50: #1e3a8a;
+  --secondary-100: #1e40af;
+  --secondary-200: #2563eb;
+  --secondary-300: #3b82f6;
+  --secondary-400: #60a5fa;
+  --secondary-500: #93c5fd;
+  --secondary-600: #bfdbfe;
+  --secondary-700: #dbeafe;
+  --secondary-800: #eff6ff;
+  --secondary-900: #f8fafc;
   
   /* 기본 색상 (다크 모드) */
   --background: #0f172a;
@@ -128,7 +128,7 @@
   
   /* 차트 컬러 (다크 모드) */
   --chart-1: #3b82f6;
-  --chart-2: #06b6d4;
+  --chart-2: #3b82f6;
   --chart-3: #f59e0b;
   --chart-4: #10b981;
   --chart-5: #8b5cf6;
