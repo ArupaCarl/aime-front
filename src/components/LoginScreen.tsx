@@ -4,6 +4,7 @@ import { Input } from './ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Label } from './ui/label';
 import { Separator } from './ui/separator';
+import { useTranslation } from 'react-i18next';
 
 import { User } from '../types';
 
@@ -12,6 +13,7 @@ interface LoginScreenProps {
 }
 
 export function LoginScreen({ onLogin }: LoginScreenProps) {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -51,9 +53,9 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
     <div className="min-h-screen flex items-center justify-center bg-background p-4" role="main">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl">로그인</CardTitle>
+          <CardTitle className="text-2xl">{t('auth.login')}</CardTitle>
           <CardDescription>
-            프로젝트 관리 도구에 로그인하세요
+            {t('auth.loginDescription')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -62,7 +64,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
             className="w-full" 
             onClick={handleGoogleLogin}
             disabled={isLoading}
-            aria-label="Google 계정으로 로그인"
+            aria-label={t('auth.loginWithGoogle')}
           >
             <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
               <path
@@ -82,7 +84,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
                 d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
               />
             </svg>
-            Google로 로그인
+            {t('auth.loginWithGoogle')}
           </Button>
           
           <div className="relative">
@@ -90,13 +92,13 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
               <Separator className="w-full" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">또는</span>
+              <span className="bg-background px-2 text-muted-foreground">{t('auth.or')}</span>
             </div>
           </div>
 
           <form onSubmit={handleEmailLogin} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">이메일</Label>
+              <Label htmlFor="email">{t('auth.email')}</Label>
               <Input
                 id="email"
                 type="email"
@@ -107,7 +109,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">비밀번호</Label>
+              <Label htmlFor="password">{t('auth.password')}</Label>
               <Input
                 id="password"
                 type="password"
@@ -120,9 +122,9 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
               type="submit" 
               className="w-full" 
               disabled={isLoading}
-              aria-label={isLoading ? '로그인 처리 중' : '이메일과 비밀번호로 로그인'}
+              aria-label={isLoading ? t('auth.loginProcessing') : t('auth.loginWithEmail')}
             >
-              {isLoading ? '로그인 중...' : '이메일로 로그인'}
+              {isLoading ? t('auth.loginProcessing') : t('auth.loginWithEmail')}
             </Button>
           </form>
         </CardContent>
